@@ -1,9 +1,10 @@
 
 if (!collected && place_meeting(x, y, oPlayer)) {
 	// Add to inventory
+	var _added = inv_add(type, 1);
 	
 	// Collected
-	collected = true;
+	collected = _added;
 }
 
 // Fade away

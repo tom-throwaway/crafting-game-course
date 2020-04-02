@@ -215,6 +215,14 @@
             }
         },
         {
+            "Key": "6388c3ee-89dc-43ef-88a6-6aaed8f03d78",
+            "Value": {
+                "id": "21c7bb13-c1ea-4000-9fd5-116338d350db",
+                "resourcePath": "views\\6388c3ee-89dc-43ef-88a6-6aaed8f03d78.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "6a9e0254-f872-498e-8e82-b6fb276af40d",
             "Value": {
                 "id": "2ade231a-f4e7-480d-9249-236a60da9601",
@@ -235,6 +243,14 @@
             "Value": {
                 "id": "38ac1722-cd59-4b7f-86ce-80307cc7788c",
                 "resourcePath": "views\\7a73efb3-7d15-4f5c-b1c5-8b9d025114bd.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "87da211f-0132-4700-8a3a-8e57e1c413e7",
+            "Value": {
+                "id": "58e25e31-7c02-435b-bfb6-9aa2000f4dc8",
+                "resourcePath": "views\\87da211f-0132-4700-8a3a-8e57e1c413e7.yy",
                 "resourceType": "GMFolder"
             }
         },
@@ -287,6 +303,14 @@
             }
         },
         {
+            "Key": "a0909e5c-f7a5-432f-aa80-c758a6665e5c",
+            "Value": {
+                "id": "bc9261b3-69f2-42b2-85d1-f35463be558e",
+                "resourcePath": "objects\\oButtonParent\\oButtonParent.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "a3c45065-ed2f-42bb-a47a-3822a3355fe7",
             "Value": {
                 "id": "309b0963-2e05-4bec-bc5a-0e7a7de921fa",
@@ -335,6 +359,14 @@
             }
         },
         {
+            "Key": "b58de638-cff3-4c2f-aceb-cb122c85550d",
+            "Value": {
+                "id": "6c7cca69-96f3-457a-a750-f450f82d519f",
+                "resourcePath": "scripts\\inv_add\\inv_add.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "b5cfcfd7-996b-4558-aa11-6f593b70e542",
             "Value": {
                 "id": "02b26827-c29e-4241-8db0-f1bd6802bffb",
@@ -351,11 +383,27 @@
             }
         },
         {
+            "Key": "bd15966f-8d0f-4291-a0d4-84de43e05013",
+            "Value": {
+                "id": "e272d517-eaf0-4594-a64a-c7a73be9f9d6",
+                "resourcePath": "fonts\\ftUI\\ftUI.yy",
+                "resourceType": "GMFont"
+            }
+        },
+        {
             "Key": "c008cd3d-f14c-4455-89cf-82938c311445",
             "Value": {
                 "id": "9b8e17eb-85cb-403e-a723-087ec14ddc74",
                 "resourcePath": "views\\c008cd3d-f14c-4455-89cf-82938c311445.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "c9856409-052f-4426-9b55-d41c0a0f1744",
+            "Value": {
+                "id": "35a6ca55-9d81-4ca1-b645-d8360a2d9030",
+                "resourcePath": "objects\\oButtonInv\\oButtonInv.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -457,7 +505,8 @@
     ],
     "script_order": [
         "8b82c8e3-11f4-4043-b7bf-db05ea659b89",
-        "1eda6aa5-90d2-43ec-91f4-5a504d643428"
+        "1eda6aa5-90d2-43ec-91f4-5a504d643428",
+        "b58de638-cff3-4c2f-aceb-cb122c85550d"
     ],
     "tutorial": ""
 }
