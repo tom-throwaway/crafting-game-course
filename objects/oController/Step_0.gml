@@ -1,5 +1,6 @@
 
-// Puase on escape
+#region Pause
+// Pause on escape
 if (keyboard_check_pressed(vk_escape)) {
 	if (!pause) {
 		pause = true;
@@ -23,5 +24,24 @@ if (keyboard_check_pressed(vk_escape)) {
 		
 		// Destroy UI
 		event_user(1);
+	}
+}
+#endregion
+
+// Paused
+if (pause) {
+	// Crafting menu scrolling
+	var _wheel = mouse_wheel_up() - mouse_wheel_down();
+	_wheel *= 8;
+	
+	cMenuScroll += _wheel;
+	cMenuScroll = clamp(cMenuScroll, -cMenuHeight, 0);
+	
+	// Apply
+	with (oButtonCraft) {
+		y = ystart + other.cMenuScroll;	
+	}
+	with (oButtonTitle) {
+		y = ystart + other.cMenuScroll;	
 	}
 }

@@ -7,13 +7,26 @@ var _count = argument1;
 var _list = oController.invList;
 var _listSize = ds_list_size(_list);
 
+// Add count to existing array
 for (var i = 0; i < _listSize; i++) {
 	// Get array
 	var _arr = _list[| i];
 	
 	// Increase count if matching
-	if (_arr[0] == _item) {
+	if (is_array(_arr) && _arr[0] == _item) {
 		_arr[@ 1] += _count;
+		return true;
+	}
+}
+
+// Insert array
+for (var i = 0; i < _listSize; i++) {
+	// Get array
+	var _arr = _list[| i];
+	
+	// Empty slot
+	if (!is_array(_arr)) {
+		_list[| i] = [_item, _count];
 		return true;
 	}
 }

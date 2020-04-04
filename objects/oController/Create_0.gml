@@ -1,4 +1,4 @@
-/// @description Insert description here
+/// @description
 
 // Resolution
 enum RES {
@@ -22,3 +22,7 @@ invList = ds_list_create();
 // Pause
 pause = false;
 pauseSurf = -1;
+
+// Crafting menu
+cMenuScroll = 0;
+cMenuHeight = 0;
