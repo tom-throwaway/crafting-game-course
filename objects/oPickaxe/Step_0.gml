@@ -32,6 +32,31 @@ with (_breakable) {
 	}
 }
 
+// Get enemy object at mouse location
+var _enemy = instance_position(mouse_x, mouse_y, oEnemyParent);
+
+with (_enemy) {
+	// Get distance
+	var _dist = distance_to_object(oPlayer);
+	
+	if (_dist < other.attackDistance) {
+		// Set selected
+		other.selectorInst = id;
+		
+		// Click
+		if (other.cooldown == 0 && _mousePress) {	
+			// Set rotation
+			other.rotation = -80;
+			
+			// Set cooldown
+			other.cooldown = 20;
+			
+			// Attack
+			getAttacked(oPlayer);
+		}
+	}
+}
+
 // Reduce cooldown
 if (cooldown > 0) {
 	cooldown--;	

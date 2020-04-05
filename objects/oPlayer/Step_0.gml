@@ -10,6 +10,13 @@ var _inputY = _down - _up;
 moveX = _inputX * moveSpeed;
 moveY = _inputY * moveSpeed;
 
+// Boost
+moveX += round(boostX);
+moveY += round(boostY);
+
+boostX = lerp(boostX, 0, 0.1);
+boostY = lerp(boostY, 0, 0.1); 
+
 // Collisions
 if (collision(x + moveX, y)) {
 	while (!collision(x + sign(moveX), y)) {
@@ -45,8 +52,15 @@ if (_signMouse != 0) {
 
 // Animation speed
 if (moveX != 0 && sign(moveX) != _signMouse) {
-	image_speed = -1;	
+	image_speed = -1;
 }
 else {
 	image_speed = 1;	
+}
+
+// Die
+if (hp <= 0) {
+	instance_destroy();
+	
+	oController.alarm[0] = 60;
 }

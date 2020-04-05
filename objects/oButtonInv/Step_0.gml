@@ -1,5 +1,59 @@
 /// @description 
 
+#region Use
+if (hover && lclick) {
+	// Get array
+	var _arr = oController.invList[| slotID];
+	
+	if (is_array(_arr)) {
+		// Vars
+		var _item = _arr[0];
+		var _count = _arr[1];
+		
+		var _used = false;
+		
+		// Effect
+		instance_activate_object(oPlayer);
+		
+		switch (_item) {
+			case ITEM.POTION:
+				with (oPlayer) {
+					if (hp < hpMax) {
+						hp++;
+						_used = true;
+						
+						if (hp > hpMax) hp = hpMax;
+					}
+				}
+			break;
+			
+			case ITEM.APPLE:
+				with (oPlayer) {
+					if (hp < hpMax) {
+						hp += 0.5;
+						_used = true;
+					}
+				}
+			break;
+		}
+		
+		instance_deactivate_object(oPlayer);
+		
+		// Used
+		var _itemName = global.itemName[_item];
+		if (_used) {
+			// Reduce count
+			_arr[@ 1]--;
+			show_debug_message(_itemName + " was used");
+		}
+		else {
+			show_debug_message(_itemName + " could not be used");	
+		}
+	}
+}
+#endregion
+
+#region Drop
 // Remove
 if (hover && rclick) {
 	// Get array
@@ -37,3 +91,4 @@ if (hover && rclick) {
 		inv_remove(slotID);
 	}
 }
+#endregion
